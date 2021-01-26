@@ -11,7 +11,7 @@ shake_file: true
 
 # If true, will add site-subtitle to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml`.
-index_subtitle: false
+index_subtitle: true
 
 # Set a canonical link tag for your Hexo site.
 # See: https://support.google.com/webmasters/answer/139066
@@ -53,7 +53,7 @@ menu:
   home: / || fas fa-home
   archives: /archives/ || fas fa-folder-open
   # categories: /categories/ || fas fa-layer-group
-  # tags: /tags/ || fas fa-tags
+  tags: /tags/ || fas fa-tags
   # You can add a secondary menu like follow.
   # xxx1: javascript:; || fa(s|r|l|d|b) fa-xxx
 
@@ -109,9 +109,9 @@ night_mode:
 # The layout for sidebar and content of site.
 layout:
   # The width of the content area in website.
-  content: 768px
+  content: 1024px
   # The width of the sidebar in website.
-  sidebar: 300px
+  sidebar: 260px
   # The width between the content and the sidebar.
   content_sidebar_gap: 30px
   # The padding property of the main tag.
@@ -135,7 +135,7 @@ header:
     # Whether to show on the article page.
     post: true
   # If you set a percentage, it will be calculated based on the height of screen (Supports all CSS units)
-  height: 80%
+  height: 45%
   # Background image of site header.
   bg_image:
     enable: false
@@ -201,39 +201,39 @@ footer:
   copyright:
     enable: true
     # If not set, will be used `author` from Hexo main config (e.g. liuyib All Rights Reserved)
-    text:
+    text: kylefu
     # Start time. If not set, the current year will be used.
-    since:
+    since: 2020
     # End time. If not set, the current year will be used.
-    end:
+    end: 2021
   # The icon between the copyright and the owner.
   icon:
     enable: true
     # Icon name in FontAwesome, see: https://fontawesome.com/icons
+    # far 空心，fas 实心
     name: fas fa-heart
     # Heartbeat animation.
     animation: false
     # (Please use "" to wrap the value)
-    color: "#ff0000"
+    color: "#929292"
   # Hexo link
   powered:
-    enable: true
+    enable: false
     # Whether to show version after Hexo link (e.g. vX.X.X)
-    version: true
+    version: false
   # Theme link
   theme:
-    enable: true
+    enable: false
     # Whether to show version after theme link (e.g. vX.X.X)
-    version: true
+    version: false
   # Beian information for Chinese users, see: http://www.miitbeian.gov.cn/
   beian:
-    enable: false
+    enable: true
     # 备案 XXXXXXXX 号
-    icp:
+    icp: '粤ICP备17153602号-1'
   # Any custom text (e.g. Hosted by <a href="https://pages.github.com/" rel="noopener" target="_blank">Github Pages</a>)
   custom:
     enable: false
-    text:
 
 # Creative Commons 4.0 International License
 creative_commons:
@@ -250,7 +250,7 @@ creative_commons:
   #   it | lv | lt | hu | nl | no | pt | pt_BR | pl | ro | sl | fi | sv
   #   tr | is | cs | el | be | ru | zh | zh_TW | uk | ar | fa | bn | ja | ko
   # If not set, `en` will be used by default.
-  language:
+  language: zh
 
 # Back to top
 back2top:
@@ -286,16 +286,17 @@ author:
     # In theme directory (source/images): /images/avatar.png
     # In site directory (source/uploads): /uploads/avatar.png
     # You can also use a link of image.
-    url: /images/icons/stun-logo.svg
+    # url: /images/icons/stun-logo.svg
+    url: /images/logo.png
     # If true, the avatar would be displayed in a circle.
-    rounded: false
+    rounded: true
     # Opacity of avatar (value: 0 ~ 1)
     opacity: 1
     # Mouse hover animation
     # Optional values: turn | shake
-    animation: turn
+    animation: shake
   # Your favorite motto.
-  motto: hello world
+  motto: kylefu
 
 # Social links
 # Value before `||` is the target link, value after `||` is the name of FontAwesome icon.
@@ -348,7 +349,7 @@ feed:
 
 # The reading progress of post.
 reading_progress:
-  enable: true
+  enable: false
   # (Please use "" to wrap the value)
   color: "#fc6423"
   height: 1px
@@ -387,12 +388,12 @@ post_meta:
   icon_only: false
   # The create time of post.
   created:
-    enable: true
+    enable: false
     # Icon name in FontAwesome, see: https://fontawesome.com/icons
     icon: far fa-calendar-plus
   # The update time of post.
   updated:
-    enable: true
+    enable: false
     # Icon name in FontAwesome, see: https://fontawesome.com/icons
     icon: far fa-calendar-check
   # The approximate reading time of post.
@@ -437,7 +438,7 @@ post_widget:
     horizon_line: true
   # Article sharing
   share:
-    enable: false
+    enable: true
     # The text displayed before the share button.
     label: "Share to: "
     # Optional values: qzone | qq | weibo | wechat | douban | linkedin | facebook | twitter | google
@@ -604,12 +605,13 @@ fbcomments:
 # Statistics and Analytics config
 # ---------------------------------------------------------------
 
+#打开访问统计
 # Busuanzi statistics
 # See: https://busuanzi.ibruce.info/
 busuanzi:
   enable: false
   # Only show by icon.
-  icon_only: false
+  icon_only: true
   # Number of unique visitor to the entire site.
   site_uv:
     enable: true
@@ -621,7 +623,7 @@ busuanzi:
     icon: fas fa-eye
   # Number of page view to a post.
   post_pv:
-    enable: true
+    enable: false
     icon: fas fa-eye
 
 # Google analytics ID
